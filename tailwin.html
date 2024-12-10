@@ -6,10 +6,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
+<!---- <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
-<div class="container mx-auto grid grid-cols-3 gap-4">
+<div class="container mx-auto grid grid-cols-3 gap-6">
     <div class="bg-blue-500 h-24">col 01</div>
     <div class="bg-green-500 h-24">col 02</div>
     <div class="bg-yellow-500 h-24">col 03</div>
@@ -18,9 +18,91 @@
 
     <div class="grid grid-rows-2 gap-4">
         <div class="bg-purple-500 h-24">row01</div>
-        <div class="bg-pink-500 h-24">row 02</div>
+        <div class="bg-pink-500 h-24">row </div>
     </div>
+</div>-->
+
+<h2 class="text-lg font-semibold mb-4 p-4 bg-gray-100 inline-block rounded-lg shadow-md">Movie Library</h2>
+  <!-- Description text -->
+  <p class="text-lg text-gray-600 mb-8">A collection of beautiful movies displayed in a responsive grid layout.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+  <div class="flex justify-center">
+    <img src="https://cdn11.bigcommerce.com/s-twbzkv97cv/images/stencil/500x659/products/6525/9870/captainamericafirstavenger__08751.1578192366.1280.1280__72993.1619038857.jpg?c=2" alt="Image 1" class="rounded-lg shadow-lg">
+  </div>
+  <div class="flex justify-center">
+    <img src="https://images.moviesanywhere.com/f63168b72788f0d189548e7130d3ffac/78720b79-de19-4d10-b80b-1172b068328a.webp?h=375&resize=fit&w=250" alt="Image 2" class="rounded-lg shadow-lg">
+  </div>
+  <div class="flex justify-center">
+    <img src="https://resizing.flixster.com/xCvhLoukJJIAzltQJqZlUaMjsVs=/206x305/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8548776_p_v13_bf.jpg" alt="Image 3" class="rounded-lg shadow-lg">
+  </div>
 </div>
-  
+
+  <div class="container mx-auto px-4 py-8">
+
+    <!-- Main Section with Form and Map -->
+    <div class="flex flex-wrap justify-between gap-8">
+
+      <!-- Form Section -->
+      <div class="w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-semibold text-center mb-4">How to Reach Us</h2>
+        <p class="text-lg text-gray-600 text-center mb-6">Fill in the details below and send it to us. We will contact you shortly.</p>
+
+        <form action="#" method="POST">
+          <!-- Name Fields (First Name and Last Name) -->
+          <div class="flex space-x-4 mb-4">
+            <div class="w-full">
+              <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+              <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="w-full">
+              <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+              <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="mb-4">
+            <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <input type="password" id="password" name="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+          </div>
+
+          <!-- City, State, and Zip Fields -->
+          <div class="flex space-x-4 mb-4">
+            <div class="w-full">
+              <label for="city" class="block text-sm font-medium text-gray-700 mb-2">City</label>
+              <input type="text" id="city" name="city" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="w-full">
+              <label for="state" class="block text-sm font-medium text-gray-700 mb-2">State</label>
+              <select id="state" name="state" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+                <option value="" disabled selected>Select State</option>
+                <option value="california">California</option>
+                <option value="texas">Texas</option>
+                <option value="florida">Florida</option>
+                <option value="new-york">New York</option>
+              </select>
+            </div>
+            <div class="w-full">
+              <label for="zip" class="block text-sm font-medium text-gray-700 mb-2">ZIP</label>
+              <input type="text" id="zip" name="zip" required class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full px-4 py-3 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">Submit</button>
+        </form>
+      </div>
+
+      <!-- Google Map Section -->
+      <div class="w-full lg:w-1/3 bg-white rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold text-center p-4">Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.3709078325697!2d-122.42526528468107!3d37.77492927975966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808581c2b1fd946d%3A0x18e8462510c7f1bb!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1643879158257!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
 </html>
