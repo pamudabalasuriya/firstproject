@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Developer Form</h2>
+        <p>Thank you for adding details</p>
+        <form class="developer-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="Name" disabled>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="Email" disabled>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value="Age" disabled>
+            </div>
+            
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <select id="nationality" name="nationality" disabled>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="India">India</option>
+                </select>
+            </div>
+    
+            <div class="form-group developer-role">
+                <label>Developer:</label>
+                <input type="radio" id="frontend" name="developer" value="Frontend" disabled> Frontend
+                <input type="radio" id="backend" name="developer" value="Backend" disabled> Backend
+                <input type="radio" id="fullstack" name="developer" value="Fullstack" disabled> Fullstack
+            </div>
+    
+            <div class="form-group qualification">
+                <label>Qualification:</label>
+                <input type="checkbox" id="degree" name="qualification" disabled> Degree
+                <input type="checkbox" id="diploma" name="qualification" disabled> Diploma
+            </div>
+    
+            <div class="form-group">
+                <label for="comments">Add Comments:</label>
+                <textarea id="comments" name="comments" disabled>Comments</textarea>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
