@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Wealth Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 10px;
+            width: 150px; /* Adjust width to your preference */
+            margin-right: 20px; /* Space between buttons and content */
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #user-list {
+            margin-top: 20px;
+            max-width: 500px;
+        }
+        .user-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button onclick="addUser()">Add User</button>
+        <button onclick="doubleWealth()">Double Wealth</button>
+        <button onclick="showMillionaires()">Show Millionaires</button>
+        <button onclick="sortUsers()">Sort Users</button>
+        <button onclick="calculateWealth()">Calculate Total Wealth</button>
+    </div>
+
+    <div id="user-list"></div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
