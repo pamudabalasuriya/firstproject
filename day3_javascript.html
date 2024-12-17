@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lyrics Finder</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .search-btn:hover {
+            background-color: #45a049;
+        }
+
+        .suggestions {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .suggestion-item:hover {
+            background-color: #ddd;
+        }
+
+        /* Box for lyrics */
+        .lyrics-box {
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            max-height: 400px; /* Limit the height of the lyrics box */
+            overflow-y: auto;  /* Enable vertical scrolling if content overflows */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hide the lyrics box */
+        }
+
+        .song-info {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lyrics Finder</h1>
+        <input type="text" id="search-input" class="search-box" placeholder="Search for a song">
+        <button class="search-btn" onclick="getSuggestions()">Search Songs</button>
+
+        <div id="suggestions-container" class="suggestions"></div>
+        <div id="error-message" class="error-message"></div>
+        
+        <!-- Box for lyrics (Initially hidden) -->
+        <div id="lyrics-container" class="lyrics-box">
+            <div id="lyrics-content"></div> <!-- This will hold the lyrics -->
+        </div>
+    </div>
+
+    <script src="day3_js.js"></script>
+</body>
+</html>
