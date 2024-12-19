@@ -2,8 +2,9 @@ import React from 'react'
 
 const Jhon = () => {
   return (
-    <div>Jhon
-        <p>my name is jhon</p>
+    <div>
+        <button id="colorB">change color</button>
+        <div id="colorBox">Click the button to change color</div>
     </div>
   )
 }
