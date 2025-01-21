@@ -8,11 +8,12 @@ import Parent from './Parent';
 import Votes from './Votes';
 import Lesson from './Lesson';
 import Ref from './Ref';
+import Counter1 from './Counter1';
 
 function App() {
   return (
     <>
-      <Ref />
+      <Counter1 />
     </>
   );
 }
