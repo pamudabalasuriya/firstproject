@@ -59,20 +59,24 @@
 
 // app.js
 const express = require("express");
-const connectToDatabase = require("./db"); // Import the database connection function
+// const connectToDatabase = require("./db");
+const cookieParser = require("cookie-parser"); // Import the database connection function
 const post = require("./post"); // Import the post routes from post.js
+const login = require("./login");
 
 const app = express();
 const port = 3000;
 
+app.use(cookieParser());
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
 // Use the post routes defined in post.js
 app.use("/api/post", post);
+app.use("/api/login", login);
 
 // Connect to MongoDB and start the server
-connectToDatabase()
+// connectToDatabase()
 
         // Start the server if the database connection is successful
 app.listen(port, () => {
