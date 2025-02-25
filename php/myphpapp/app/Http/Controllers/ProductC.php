@@ -29,22 +29,26 @@ class ProductC extends Controller
         return redirect()->route('products.index')->with('success','Product added successfully');
     }
 
-    public function edit($id)
+    public function edit(Product $product)
     {
-        $products = Product::findOrFail($id); // Find the product by ID or fail
-        return view('products.edit', compact('products')); // Pass product to the edit view
+       // $products = Product::findOrFail($id); // Find the product by ID or fail
+        return view('products.edit', compact('product')); // Pass product to the edit view
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
         $request->validate([
             'name' => 'required',
             'details' => 'required',
         ]);
+        $product->update($request->all());
 
-        $products = Product::findOrFail($id);
-        $products->update($request->all());
+        return redirect()->route('products.index')->with('success', 'Product updated successfully');
+    }
 
+    public function destroy(Product $product)
+    {
+       $product->delete();
         return redirect()->route('products.index')->with('success', 'Product updated successfully');
     }
 
